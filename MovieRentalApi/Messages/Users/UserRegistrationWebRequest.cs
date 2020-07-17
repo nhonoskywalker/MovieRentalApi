@@ -19,11 +19,15 @@
         public string Email { get; set; }
 
         [JsonProperty("firstname")]
-        [Required, MinLength(5)]
+        [Required, MinLength(1)]
         public string FirstName { get; set; }
 
         [JsonProperty("lastname")]
-        [Required, MinLength(5)]
+        [Required, MinLength(1)]
         public string LastName { get; set; }
+
+        [JsonProperty("role")]
+        [Required]
+        public string Role { get; set; }
     }
 }

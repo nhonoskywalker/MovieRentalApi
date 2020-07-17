@@ -22,6 +22,7 @@
                 Title = entity.Title,
                 Description = entity.Description,
                 IsDeleted = entity.IsDeleted,
+                RentalDate = entity.RentalDate,
                 IsRented = entity.IsRented
             };
 

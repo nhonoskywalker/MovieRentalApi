@@ -4,7 +4,6 @@
     using MRAPP.Insfrastructure.Messages.UserRegistration;
     using MRAPP.Insfrastructure.Processes;
     using MRAPP.Services.Users.Enums;
-    using System;
     using System.Threading.Tasks;
 
     public class CreateUser : ProcessStep<UserRegistrationResponse>

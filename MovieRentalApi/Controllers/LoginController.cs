@@ -22,7 +22,7 @@ namespace MovieRentalApi.Controllers
         }
 
         [HttpPost]
-        [Route("login")]
+        [Route("")]
         [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] LogInWebRequest webRequest)
         {

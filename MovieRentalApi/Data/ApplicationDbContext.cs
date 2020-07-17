@@ -6,7 +6,7 @@
     using MRAPP.Data.Movies;
     using MRAPP.Infrastructure.Data;
     using System;
-
+    using System.Threading.Tasks;
     public class ApplicationDbContext : IdentityDbContext<
         UserEntity, RoleEntity, Guid, UserClaimEntity, UserRolesEntity, UserLoginEntity, RoleClaimEntity, UserTokenEntity>,
         IApplicationDbContext
@@ -18,8 +18,7 @@
 
         }
 
-        public System.Data.Entity.DbSet<MovieEntity> Movies { get; set; }
-
+        public DbSet<MovieEntity> Movies { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -65,6 +64,16 @@
                 entity.ToTable("Movies");
                 entity.HasKey(c => c.Id);
             });
+        }
+
+        public async Task SaveChangesAsync()
+        {
+            await base.SaveChangesAsync();
+        }
+
+        public new void SaveChanges()
+        {
+            base.SaveChanges();
         }
     }
 }

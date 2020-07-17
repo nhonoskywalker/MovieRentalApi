@@ -1,5 +1,6 @@
 ﻿namespace MRAPP.Services.Movies.Repository
 {
+    using MRAPP.Data.Movies;
     using MRAPP.Insfrastructure.Models.Movies;
     using System;
     using System.Collections.Generic;
@@ -7,8 +8,14 @@
 
     public interface IMoviesRepository
     {
-        Task<IEnumerable<MovieModel>> GetMovies();
+        Task<IEnumerable<MovieModel>> GetMoviesAsync();
 
-        Task<MovieModel> GetMovieById(Guid id);
+        Task<MovieModel> GetMovieByIdAsync(Guid id);
+
+        Task<MovieModel> AddMovieAsync(MovieEntity entity);
+
+        Task<MovieModel> UpdateMovieAsync(MovieEntity entity);
+
+        Task<MovieModel> DeleteMovieAsync(MovieEntity entity);
     }
 }

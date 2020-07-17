@@ -18,7 +18,9 @@
         public override async Task ProcessAsync()
         {
             var request = logInContext.Request;
-            var signInResult = await logInContext.SignInManager.PasswordSignInAsync(request.Email, request.Password, false, false);
+            var user = await logInContext.UserManager.FindByEmailAsync(request.Email);
+
+            var signInResult = await logInContext.SignInManager.PasswordSignInAsync(user.UserName, request.Password, false, false);
 
 
             if (signInResult.Succeeded)

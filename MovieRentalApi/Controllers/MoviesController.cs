@@ -5,7 +5,6 @@ using MRAPP.Extensions.Messages;
 using MRAPP.Messages.Movies;
 using MRAPP.Services.Movies;
 using System.Threading.Tasks;
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace MovieRentalApi.Controllers
 {
@@ -19,47 +18,50 @@ namespace MovieRentalApi.Controllers
         {
             this.movieService = movieService;
         }
-
       
-        // GET api/<MoviesController>/5
         [HttpGet("{id}")]
         [Authorize(Roles = "Customer, Admin")]
-        public async Task<IActionResult> GetMovieByIdAsync(GetMovieByIdWebRequest request)
+        public async Task<IActionResult> GetMovieByIdAsync(GetMovieByIdWebRequest webRequest)
         {
-            var result = await this.movieService.GetMovieById(request.AsRequest());
+            var result = await this.movieService.GetMovieByIdAsync(webRequest.AsRequest());
 
             return this.CreateResponse(result.AsWebResponse());
         }
 
-        // GET: api/<MoviesController>
         [HttpGet]
         [Authorize(Roles = "Customer, Admin")]
-        public async Task<IActionResult> GetMoviesAsync(GetMoviesWebRequest request)
+        public async Task<IActionResult> GetMoviesAsync(GetMoviesWebRequest webRequest)
         {
-            var result = await this.movieService.GetMovies(request.AsRequest());
+            var result = await this.movieService.GetMoviesAsync(webRequest.AsRequest());
 
             return this.CreateResponse(result.AsWebResponse());
         }
 
-        // POST api/<MoviesController>
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> AddMovieAsync([FromBody] AddMovieWebRequest webRequest)
         {
+            var result = await this.movieService.AddMovieAsync(webRequest.AsRequest());
+
+            return this.CreateResponse(result.AsWebResponse());
         }
 
-        // PUT api/<MoviesController>/5
-        [HttpPut("{id}")]
+        [HttpPut]
         [Authorize(Roles = "Admin")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> UpdateMovieAsync([FromBody] UpdateMovieWebRequest webRequest)
         {
+            var result = await this.movieService.UpdateMovieAsync(webRequest.AsRequest());
+
+            return this.CreateResponse(result.AsWebResponse());
         }
 
-        // DELETE api/<MoviesController>/5
-        [HttpDelete("{id}")]
+        [HttpDelete]
         [Authorize(Roles = "Admin")]
-        public void Delete(int id)
+        public async Task<IActionResult> DeleteMovieAsync([FromBody] DeleteMovieWebRequest webRequest)
         {
+            var result = await this.movieService.DeleteMovieAsync(webRequest.AsRequest());
+
+            return this.CreateResponse(result.AsWebResponse());
         }
     }
 }

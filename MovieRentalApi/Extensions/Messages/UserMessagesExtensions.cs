@@ -12,7 +12,8 @@
                 Username = request.UserName,
                 Password = request.Password,
                 Email = request.Email,
-                Fullname = request.FirstName + " " + request.LastName
+                Fullname = request.FirstName + " " + request.LastName,
+                Role = request.Role
             };
 
             return result;

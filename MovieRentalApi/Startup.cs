@@ -15,7 +15,6 @@ using MRAPP.Options;
 using MRAPP.Providers;
 using MRAPP.Services.Authentication;
 using MRAPP.Services.AuthToken;
-using MRAPP.Services.Badges;
 using MRAPP.Services.Movies;
 using MRAPP.Services.Movies.Repository;
 using MRAPP.Services.Roles;

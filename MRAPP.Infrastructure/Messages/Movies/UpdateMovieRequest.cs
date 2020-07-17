@@ -1,23 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using System.Text;
 
-namespace MRAPP.Data.Movies
+namespace MRAPP.Infrastructure.Messages.Movies
 {
-    public class MovieEntity
+    [DataContract]
+    public class UpdateMovieRequest
     {
-        [Key]
-        public Guid? Id { get; set; }
+        [DataMember]
+        public Guid Id { get; set; }
 
+        [DataMember]
         public string Title { get; set; }
 
+        [DataMember]
         public string Description { get; set; }
 
+        [DataMember]
         public bool IsRented { get; set; }
 
+        [DataMember]
         public DateTime RentalDate { get; set; }
 
+        [DataMember]
         public bool IsDeleted { get; set; }
     }
 }
