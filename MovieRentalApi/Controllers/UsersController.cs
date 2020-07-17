@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using MovieRentalApi.Messages.Users;
 using MRAPP.Extensions;
 using MRAPP.Extensions.Messages;
 using MRAPP.Messages.Users;
@@ -30,6 +31,15 @@ namespace MovieRentalApi.Controllers
         public async Task<IActionResult> RegisterUserAsync([FromBody] UserRegistrationWebRequest webRequest)
         {
             var result = await this.userService.RegisterUserAsync(webRequest.AsRequest());
+
+            return this.CreateResponse(result.AsWebResponse());
+        }
+
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetUsersAsync([FromBody] GetUsersWebRequest webRequest)
+        {
+            var result = await this.userService.GetUsersAsync(webRequest.AsRequest());
 
             return this.CreateResponse(result.AsWebResponse());
         }

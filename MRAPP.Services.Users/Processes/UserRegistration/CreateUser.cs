@@ -25,7 +25,8 @@
                 var entity = new UserEntity {
                     UserName = request.Username,
                     Email = request.Email,
-                    Fullname = request.Fullname
+                    Fullname = request.Fullname,
+                    Address = request.Address
                 };
 
                 var identityResult = await userRegistrationContext.UserManager.CreateAsync(entity, request.Password);

@@ -19,6 +19,7 @@ using MRAPP.Services.Movies;
 using MRAPP.Services.Movies.Repository;
 using MRAPP.Services.Roles;
 using MRAPP.Services.Users;
+using MRAPP.Services.Users.Repository;
 using System.Text;
 
 namespace MovieRentalApi
@@ -49,6 +50,8 @@ namespace MovieRentalApi
             services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
             services.AddScoped<IMoviesRepository, MoviesRepository>();
             services.AddScoped<IMovieService, MovieService>();
+
+            services.AddScoped<IUserRepository, UserRepository>();
 
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IRoleService, RoleService>();

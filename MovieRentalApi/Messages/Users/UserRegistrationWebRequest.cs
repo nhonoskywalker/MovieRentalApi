@@ -29,5 +29,9 @@
         [JsonProperty("role")]
         [Required]
         public string Role { get; set; }
+
+        [JsonProperty("address")]
+        [Required]
+        public string Address { get; set; }
     }
 }

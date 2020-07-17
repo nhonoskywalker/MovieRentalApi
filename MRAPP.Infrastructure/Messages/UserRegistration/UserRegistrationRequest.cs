@@ -21,5 +21,8 @@
         [DataMember]
         public string Role;
 
+        [DataMember]
+        public string Address;
+
     }
 }

@@ -20,6 +20,8 @@
 
         public DbSet<MovieEntity> Movies { get; set; }
 
+        public override DbSet<UserEntity> Users { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
