@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MRAPP.Infrastructure\MRAPP.Infrastructure.csproj" />
+    <ProjectReference Include="..\MRAPP.Services.Authentication\MRAPP.Services.Authentication.csproj" />
+    <ProjectReference Include="..\MRAPP.Services.AuthToken\MRAPP.Services.AuthToken.csproj" />
+    <ProjectReference Include="..\MRAPP.Services.Movies\MRAPP.Services.Movies.csproj" />
+    <ProjectReference Include="..\MRAPP.Services.Roles\MRAPP.Services.Roles.csproj" />
+    <ProjectReference Include="..\MRAPP.Services.Users\MRAPP.Services.Users.csproj" />
+  </ItemGroup>
+
+
+</Project>

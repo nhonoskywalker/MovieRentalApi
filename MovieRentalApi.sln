@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRentalApi", "MovieRentalApi\MovieRentalApi.csproj", "{C009F20E-11E1-4276-9685-C016E3FA0047}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{772F9F99-4264-4523-81FE-DC382C21E22B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MRAPP.Data", "MRAPP.Data\MRAPP.Data.csproj", "{042A9D19-103A-4366-AE4F-4E9AE47ECC9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{1D05F605-9459-45CA-8DD2-DB5E34135490}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MRAPP.Infrastructure", "MRAPP.Infrastructure\MRAPP.Infrastructure.csproj", "{117E1845-EE49-419B-8FF8-FD0279C78026}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E92D463A-B4AC-4FC1-A7D1-9AD87846E24A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MRAPP.Services.Authentication", "MRAPP.Services.Authentication\MRAPP.Services.Authentication.csproj", "{CE5C0323-A7E0-431F-8B17-2670E608E696}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MRAPP.Services.AuthToken", "MRAPP.Services.AuthToken\MRAPP.Services.AuthToken.csproj", "{75C9EF45-0529-422C-AB4C-6E660AE2DAF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MRAPP.Services.Users", "MRAPP.Services.Users\MRAPP.Services.Users.csproj", "{5E8A7FF6-80D2-4D65-8D69-DB78B6DA5FBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MRAPP.Services.Roles", "MRAPP.Services.Roles\MRAPP.Services.Roles.csproj", "{8290BC47-EAE1-402E-AD51-9089F7C7000F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MRAPP.Services.Movies", "MRAPP.Services.Movies\MRAPP.Services.Movies.csproj", "{07FEA286-7DCC-49B6-8004-4CB4035580D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C009F20E-11E1-4276-9685-C016E3FA0047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C009F20E-11E1-4276-9685-C016E3FA0047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C009F20E-11E1-4276-9685-C016E3FA0047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C009F20E-11E1-4276-9685-C016E3FA0047}.Release|Any CPU.Build.0 = Release|Any CPU
+		{042A9D19-103A-4366-AE4F-4E9AE47ECC9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042A9D19-103A-4366-AE4F-4E9AE47ECC9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042A9D19-103A-4366-AE4F-4E9AE47ECC9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042A9D19-103A-4366-AE4F-4E9AE47ECC9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{117E1845-EE49-419B-8FF8-FD0279C78026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{117E1845-EE49-419B-8FF8-FD0279C78026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{117E1845-EE49-419B-8FF8-FD0279C78026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{117E1845-EE49-419B-8FF8-FD0279C78026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE5C0323-A7E0-431F-8B17-2670E608E696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE5C0323-A7E0-431F-8B17-2670E608E696}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE5C0323-A7E0-431F-8B17-2670E608E696}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE5C0323-A7E0-431F-8B17-2670E608E696}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75C9EF45-0529-422C-AB4C-6E660AE2DAF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75C9EF45-0529-422C-AB4C-6E660AE2DAF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75C9EF45-0529-422C-AB4C-6E660AE2DAF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75C9EF45-0529-422C-AB4C-6E660AE2DAF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E8A7FF6-80D2-4D65-8D69-DB78B6DA5FBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E8A7FF6-80D2-4D65-8D69-DB78B6DA5FBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E8A7FF6-80D2-4D65-8D69-DB78B6DA5FBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E8A7FF6-80D2-4D65-8D69-DB78B6DA5FBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8290BC47-EAE1-402E-AD51-9089F7C7000F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8290BC47-EAE1-402E-AD51-9089F7C7000F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8290BC47-EAE1-402E-AD51-9089F7C7000F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8290BC47-EAE1-402E-AD51-9089F7C7000F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07FEA286-7DCC-49B6-8004-4CB4035580D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07FEA286-7DCC-49B6-8004-4CB4035580D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07FEA286-7DCC-49B6-8004-4CB4035580D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07FEA286-7DCC-49B6-8004-4CB4035580D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{042A9D19-103A-4366-AE4F-4E9AE47ECC9E} = {772F9F99-4264-4523-81FE-DC382C21E22B}
+		{117E1845-EE49-419B-8FF8-FD0279C78026} = {1D05F605-9459-45CA-8DD2-DB5E34135490}
+		{CE5C0323-A7E0-431F-8B17-2670E608E696} = {E92D463A-B4AC-4FC1-A7D1-9AD87846E24A}
+		{75C9EF45-0529-422C-AB4C-6E660AE2DAF3} = {E92D463A-B4AC-4FC1-A7D1-9AD87846E24A}
+		{5E8A7FF6-80D2-4D65-8D69-DB78B6DA5FBC} = {E92D463A-B4AC-4FC1-A7D1-9AD87846E24A}
+		{8290BC47-EAE1-402E-AD51-9089F7C7000F} = {E92D463A-B4AC-4FC1-A7D1-9AD87846E24A}
+		{07FEA286-7DCC-49B6-8004-4CB4035580D1} = {E92D463A-B4AC-4FC1-A7D1-9AD87846E24A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1697AF1F-0128-402F-82A2-7711B3535C53}
+	EndGlobalSection
+EndGlobal
