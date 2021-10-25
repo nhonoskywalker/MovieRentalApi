@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MovieRentalApi.Filters;
 using MovieRentalApi.Messages.Users;
 using MRAPP.Extensions;
 using MRAPP.Extensions.Messages;
@@ -38,8 +37,6 @@ namespace MovieRentalApi.Controllers
             return this.CreateResponse(result.AsWebResponse());
         }
 
-		[ServiceFilter(typeof(DependencyFilter))]
-		[TestActionAttribute]
         [HttpGet]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetUsersAsync([FromBody] GetUsersWebRequest webRequest)

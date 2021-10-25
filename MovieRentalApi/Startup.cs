@@ -8,7 +8,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using MovieRentalApi.Filters;
 using MRAPP.Data;
 using MRAPP.Data.Entities.Users;
 using MRAPP.Infrastructure.Data;
@@ -40,14 +39,6 @@ namespace MovieRentalApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers().AddNewtonsoftJson();
-
-            services.AddControllers(o => {
-				o.Filters.Add(new TestActionFilter());
-				o.Filters.Add(new TestAuthorizatioFilter());
-				o.Filters.Add(new ResourceFilter());
-			});
-
-			services.AddScoped<DependencyFilter>();
 
             services.AddSingleton<IDbConnectionStringProvider, DbConnectionStringProvider>();
 
