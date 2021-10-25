@@ -40,7 +40,6 @@ namespace MRAPP.Extensions.Messages
             var result = new DeleteMovieRequest
             {
                 Id = webRequest.Id,
-                IsDeleted = webRequest.IsDeleted,
             };
 
             return result;

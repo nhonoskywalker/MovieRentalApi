@@ -11,9 +11,5 @@ namespace MRAPP.Messages.Movies
         [JsonRequired]
         [JsonProperty("id")]
         public Guid Id { get; set; }
-
-        [DataMember]
-        [JsonRequired]
-        public bool IsDeleted { get; set; }
     }
 }

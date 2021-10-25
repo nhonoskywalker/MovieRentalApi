@@ -1,5 +1,6 @@
 ﻿namespace MRAPP.Services.Movies.Repository
 {
+    using Microsoft.EntityFrameworkCore;
     using MRAPP.Data.Movies;
     using MRAPP.Infrastructure.Data;
     using MRAPP.Insfrastructure.Models.Movies;
@@ -19,9 +20,9 @@
             this.appDbContext = appDbContext;
         }
 
-        public async Task<MovieModel> GetMovieByIdAsync(Guid id)
+        public async Task<MovieModel> GetMovieByIdAsync(Guid? id)
         {
-            var result = this.appDbContext.Movies.FirstOrDefault(m => m.Id == id);
+            var result = await this.appDbContext.Movies.FirstOrDefaultAsync(m => m.Id == id);
 
             return result?.AsModel();
         }

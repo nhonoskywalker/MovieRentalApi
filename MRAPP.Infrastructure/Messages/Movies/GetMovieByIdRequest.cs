@@ -8,6 +8,6 @@
     public class GetMovieByIdRequest : Request
     {
         [DataMember]
-        public Guid Id { get; set; }
+        public Guid? Id { get; set; }
     }
 }

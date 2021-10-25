@@ -1,14 +1,15 @@
 ﻿namespace MRAPP.Messages.Movies
 {
-    using Newtonsoft.Json;
     using System;
     using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
+    using System.ComponentModel.DataAnnotations;
+    using Newtonsoft.Json;
 
-    [DataContract]
     public class GetMovieByIdWebRequest : WebRequest
     {
         [DataMember]
-        [JsonRequired]
+        [Required]
         [JsonProperty("id")]
         public Guid Id { get; set; }
     }

@@ -10,7 +10,7 @@
     {
         Task<IEnumerable<MovieModel>> GetMoviesAsync();
 
-        Task<MovieModel> GetMovieByIdAsync(Guid id);
+        Task<MovieModel> GetMovieByIdAsync(Guid? id);
 
         Task<MovieModel> AddMovieAsync(MovieEntity entity);
 

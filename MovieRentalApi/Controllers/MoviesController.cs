@@ -4,6 +4,7 @@ using MRAPP.Extensions;
 using MRAPP.Extensions.Messages;
 using MRAPP.Messages.Movies;
 using MRAPP.Services.Movies;
+using System;
 using System.Threading.Tasks;
 
 namespace MovieRentalApi.Controllers
@@ -19,10 +20,11 @@ namespace MovieRentalApi.Controllers
             this.movieService = movieService;
         }
       
-        [HttpGet("{id}")]
+        [HttpGet("{id:guid}")]
         [Authorize(Roles = "Customer, Admin")]
-        public async Task<IActionResult> GetMovieByIdAsync(GetMovieByIdWebRequest webRequest)
+        public async Task<IActionResult> GetMovieByIdAsync(Guid id)
         {
+            var webRequest = new GetMovieByIdWebRequest { Id = id };
             var result = await this.movieService.GetMovieByIdAsync(webRequest.AsRequest());
 
             return this.CreateResponse(result.AsWebResponse());
@@ -55,10 +57,11 @@ namespace MovieRentalApi.Controllers
             return this.CreateResponse(result.AsWebResponse());
         }
 
-        [HttpDelete]
+        [HttpDelete("{id:guid}")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> DeleteMovieAsync([FromBody] DeleteMovieWebRequest webRequest)
+        public async Task<IActionResult> DeleteMovieAsync(Guid id)
         {
+            var webRequest = new DeleteMovieWebRequest { Id = id };
             var result = await this.movieService.DeleteMovieAsync(webRequest.AsRequest());
 
             return this.CreateResponse(result.AsWebResponse());
