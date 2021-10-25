@@ -32,8 +32,9 @@ namespace MovieRentalApi.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Customer, Admin")]
-        public async Task<IActionResult> GetMoviesAsync(GetMoviesWebRequest webRequest)
+        public async Task<IActionResult> GetMoviesAsync()
         {
+            var webRequest = new GetMoviesWebRequest();
             var result = await this.movieService.GetMoviesAsync(webRequest.AsRequest());
 
             return this.CreateResponse(result.AsWebResponse());

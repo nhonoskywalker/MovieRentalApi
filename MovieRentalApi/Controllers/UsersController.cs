@@ -20,7 +20,6 @@ namespace MovieRentalApi.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUserService userService;
-		private readonly IMovieService movieService;
 
         public UsersController(IUserService userService)
         {
@@ -39,8 +38,9 @@ namespace MovieRentalApi.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> GetUsersAsync([FromBody] GetUsersWebRequest webRequest)
+        public async Task<IActionResult> GetUsersAsync()
         {
+            var webRequest = new GetUsersWebRequest();
             var result = await this.userService.GetUsersAsync(webRequest.AsRequest());
 
             return this.CreateResponse(result.AsWebResponse());
